@@ -1,21 +1,32 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Example from './componentscontainer/component/Example';
+import ShowDB from './componentscontainer/component/ShowDB';
+
 
 class App extends Component {
+
+  state = { loggedin: false }
+
+  handleLogin = (login) => {
+    this.setState({ loggedin: login });
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className='App'>
+        <h1>
+          {this.state.loggedin}
+        </h1>
+        <Example handleLogin={this.handleLogin} />
+        {this.state.loggedin ? <ShowDB/> : null}
       </div>
-    );
+    )
   }
 }
-
 export default App;
+
+
+
+
