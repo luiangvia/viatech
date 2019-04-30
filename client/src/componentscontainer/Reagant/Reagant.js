@@ -1,29 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react'
 
-class Example extends React.Component {
-
-  
-handleSubmit=(event)=>{
-  event.preventDefault();
-  this.props.handleLogin(true);
-}
-
-
-    render() {
-      return(
-      <form onSubmit={this.handleSubmit}>
-      <label>
-        Name:
-        <input type="text" name="name" />
-      </label>
-      <label>
-      Password:
-        <input type="text" name="password" />
-        </label>
-      <input type="submit" value="Submit"/>
-    </form> 
-      );
-    }
+export default class Reagant extends Component {
+  render() {
+    return (
+      <div className="reagant"> 
+      <div className="">
+      </div>
+        
+      </div>
+    )
   }
-
-export default Example;
+}
