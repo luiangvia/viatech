@@ -2,9 +2,9 @@
   "name": "react-server-boilerplate",
   "version": "1.0.0",
   "main": "server.js",
-  "repository": "git@github.com:traut029/react-server-boilerplate.git",
-  "author": "Eric Trautmiller",
-  "license": "MIT",
+  "repository": "",
+  "author": "",
+  "license": "",
   "scripts": {
     "server": "node server.js",
     "client": "node scripts/start-client.js",

@@ -1,5 +1,6 @@
 // Example code for how models should be structured
 
+//module.exports =  (sequelize,Sequelize, DataTypes)=> {
 module.exports = function (sequelize, Sequelize) {
   var User = sequelize.define("User", {
     id: {
@@ -7,10 +8,11 @@ module.exports = function (sequelize, Sequelize) {
       autoIncrement: true,
       type: Sequelize.INTEGER
     },
-    firstname: {
+    projectname: {
       type: Sequelize.STRING,
       notEmpty: true,
-    },
+    }
+    /*,
     lastname: {
       type: Sequelize.STRING,
       notEmpy: true,
@@ -48,6 +50,8 @@ module.exports = function (sequelize, Sequelize) {
     resetPasswordExpires: {
       type: Sequelize.DATE
     }
+*/
+
   });
 
   return User;

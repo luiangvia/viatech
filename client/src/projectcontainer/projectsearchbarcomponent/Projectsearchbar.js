@@ -9,7 +9,7 @@ export default class Projectsearchbarcomponent extends Component {
             Search for Project Number:
             <input id="projectsearchinput" type="text" name="project#"/>
         </form>
-        <button class="button" id="searchforprojectbtn" type="submit">Search</button>
+        <button className="button" id="searchforprojectbtn" type="submit">Search</button>
       </div>
     )
   }

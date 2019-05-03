@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import Example from './componentscontainer/component/Example';
 import ShowDB from './componentscontainer/component/ShowDB';
@@ -11,16 +11,21 @@ import Runlist from './projectcontainer/runcontainer/runlist/Runlist';
 import Addrun from './projectcontainer/runcontainer/addruncontainer/addruncomponent/Addrun';
 import SummaryReagents from './projectcontainer/runcontainer/summaryReagentsComponent/SummaryReagents';
 import AddRunForm from './projectcontainer/runcontainer/addruncontainer/addrunformcomponent/AddRunForm';
-import Projectcategory from './projectcontainer/projectcategorycomponent/Projectcategory'
+import Projectcategory from './projectcontainer/projectcategorycomponent/Projectcategory';
+
+import LoadProjects from './AddLoadProjects/LoadProjects';
+import AddProjectForm from './AddLoadProjects/AddProjectForm';
+
 
 
 class App extends Component {
 
   state = { loggedin: false }
-
   handleLogin = (login) => {
     this.setState({ loggedin: login });
   }
+
+  //
 
   
   render() {
@@ -28,7 +33,12 @@ class App extends Component {
       <div className='App'>
       <Header/>
     <Projectsearchbarcomponent/>
+
+    <LoadProjects/>
+    <AddProjectForm/>
     <Projectlist/>
+
+
     <Projectcategory/>
     <Addrun/>
     <AddRunForm/>
