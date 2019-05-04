@@ -2,7 +2,10 @@
   "name": "react-server-boilerplate",
   "version": "1.0.0",
   "main": "server.js",
-  "repository": "git@github.com:traut029/react-server-boilerplate.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/traut029/react-server-boilerplate.git"
+  },
   "author": "Eric Trautmiller",
   "license": "MIT",
   "scripts": {
@@ -20,6 +23,12 @@
     "body-parser": "^1.18.3",
     "express": "^4.15.4",
     "mysql2": "^1.5.3",
+    "react-dropzone": "^10.1.4",
     "sequelize": "^4.37.8"
-  }
+  },
+  "description": "(Description)",
+  "bugs": {
+    "url": "https://github.com/traut029/react-server-boilerplate/issues"
+  },
+  "homepage": "https://github.com/traut029/react-server-boilerplate#readme"
 }

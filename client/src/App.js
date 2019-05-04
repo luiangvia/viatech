@@ -12,7 +12,7 @@ import Addrun from './projectcontainer/runcontainer/addruncontainer/addruncompon
 import SummaryReagents from './projectcontainer/runcontainer/summaryReagentsComponent/SummaryReagents';
 import AddRunForm from './projectcontainer/runcontainer/addruncontainer/addrunformcomponent/AddRunForm';
 import Projectcategory from './projectcontainer/projectcategorycomponent/Projectcategory';
-import Draganddrop from './reagantcontainer/draganddropcomponent/Draganddrop';
+import Imageupload from './reagantcontainer/draganddropcomponent/Imageupload';
 import Fileupload from './reagantcontainer/draganddropcomponent/Fileupload';
 import Addimagebutton from './reagantcontainer/addimagebuttoncomponent/Addimagebutton';
 import Lotnumber from './reagantcontainer/lotnumbercomponent/Lotnumber';
@@ -56,7 +56,7 @@ class App extends Component {
     <Runlist/>
     <Reagantname/>
     <Lotnumber/>
-    <Draganddrop addFile={this.addFile} files={this.state.files}/>
+    <Imageupload addFile={this.addFile} files={this.state.files}/>
     <Fileupload addFile={this.addFile} files={this.state.files}/>
     <Addimagebutton/>
     <SummaryReagents/>
