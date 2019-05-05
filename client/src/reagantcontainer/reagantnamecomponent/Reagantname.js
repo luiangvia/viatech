@@ -9,4 +9,3 @@ export default class Reagantname extends Component {
     )
   }
 }
-s
