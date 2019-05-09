@@ -4,6 +4,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const bodyParser = require("body-parser");
 var models = require("./db/models");
+const routes = require("./db/routes");
 
 // Configure body parser for AJAX requests
 app.use(bodyParser.urlencoded({ extended: true }));
