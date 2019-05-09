@@ -4,7 +4,8 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const bodyParser = require("body-parser");
 var models = require("./db/models");
-const routes = require("./db/routes");
+const routes = require("./routes");
+
 
 // Configure body parser for AJAX requests
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -32,6 +33,10 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+// Add routes/api
+app.use(routes);
+
+
 //gets all projects from projects
 /*
 app.get("/projects",function(req,res){
@@ -41,14 +46,18 @@ app.get("/projects",function(req,res){
   })
 });
 */
-
+/*
+old routes
 app.get("/projects",function(req,res){
   console.log("this is getting")
   models.User.findAll().then(Users=>{
     console.log(Users);
   })
 });
+*/
 
+/*
+old routes
 app.post("/projects",function(req,res){
   req.body.projectname;
   models.Project.create({projectname : req.body.projectname}).then(Projects=>{
@@ -59,6 +68,9 @@ app.post("/projects",function(req,res){
   res.end();
   //console.log("this is posting")
 });
+*/
+
+
 /*
 Project.findAll().then(projects => {
   // projects will be an array of all Project instances
@@ -69,6 +81,7 @@ Project.findAll().then(projects => {
 
 // Send every request to the React app
 // Define any API routes before this runs
+
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });

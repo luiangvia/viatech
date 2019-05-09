@@ -9,6 +9,7 @@ const userRoutes = require("./user");
 // project routes
 router.use("/project", projectRoutes);
 // reagent routes
+/*
 router.use("/reagent", reagentRoutes);
 // run routes
 router.use("/run", runRoutes);
@@ -16,6 +17,6 @@ router.use("/run", runRoutes);
 router.use("/project", stageRoutes);
 // user routes
 router.use("/user", userRoutes);
-
+*/
 
 module.exports = router;

@@ -9,8 +9,10 @@
             type: Sequelize.STRING,
             notEmpty: true,
           }
+         
+        
 
-        });
+        },  { timestamps: false });
       
         return Project;
       };
