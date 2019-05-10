@@ -3,14 +3,24 @@
 //module.exports =  (sequelize,Sequelize, DataTypes)=> {
 module.exports = function (sequelize, Sequelize) {
   var User = sequelize.define("User", {
-    id: {
+    user_id: {
       primaryKey: true,
       autoIncrement: true,
       type: Sequelize.INTEGER
     },
-    projectname: {
+    name: {
       type: Sequelize.STRING,
       notEmpty: true,
+    },
+    password: {
+      type: Sequelize.STRING,
+      notEmpy: true,
+      validate: {
+        len: {
+          args: [6, 100],
+          msg: "/models/user.js, Passwords must be between 6 and 100 characters long!"
+        }
+      }
     }
     /*,
     lastname: {
@@ -56,6 +66,15 @@ module.exports = function (sequelize, Sequelize) {
   ,  { timestamps: false }
         
   );
+
+  User.associate = function(models) {
+    // Associating User with Project
+    // When an User is deleted, restrict delete of any associated Projects
+    User.hasMany(models.Project, {
+      //onDelete: "restrict"
+    });
+  };
+
 
   return User;
 };

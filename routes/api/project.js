@@ -1,9 +1,9 @@
-//this is handling the route of /api/projects
+//this is handling the route of /api/project
 const router = require("express").Router();
-const projectsController = require("../../db/controllers/projectController");
+const projectController = require("../../db/controllers/projectController");
 
 router.route("/")
-    .get(projectsController.findAll);
+    .get(projectController.findAll);
 
 /* example code below
 const router = require("express").Router();
