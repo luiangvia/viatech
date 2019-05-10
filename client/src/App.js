@@ -13,9 +13,9 @@ import SummaryReagents from './projectcontainer/runcontainer/summaryReagentsComp
 import AddRunForm from './projectcontainer/runcontainer/addruncontainer/addrunformcomponent/AddRunForm';
 import Projectcategory from './projectcontainer/projectcategorycomponent/Projectcategory';
 
-import LoadProjects from './AddLoadProjects/LoadProjects';
-import AddProjectForm from './AddLoadProjects/AddProjectForm';
-
+import ListProjects from './AddLoadListProjects/ListProjects';
+import AddProjectForm from './AddLoadListProjects/AddProjectForm';
+//TODO: RENAME THE FOLDERS/FILES
 
 
 class App extends Component {
@@ -34,7 +34,7 @@ class App extends Component {
       <Header/>
     <Projectsearchbarcomponent/>
 
-    <LoadProjects/>
+    <ListProjects/>
     <AddProjectForm/>
     <Projectlist/>
 

@@ -1,6 +1,6 @@
     module.exports = function (sequelize, Sequelize) {
         var Project = sequelize.define("Project", {
-          project_id: {
+          id: {
             primaryKey: true,
             autoIncrement: true,
             type: Sequelize.INTEGER
@@ -13,7 +13,13 @@
         
 
         },  { timestamps: false });
-
+        Project.associate = function(models) {
+          // Associating User with Project
+          // When an User is deleted, restrict delete of any associated Projects
+          Project.belongsTo(models.User, {
+            //onDelete: "restrict"
+          });
+        };
       
         return Project;
       };
