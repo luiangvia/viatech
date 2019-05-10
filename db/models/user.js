@@ -52,7 +52,10 @@ module.exports = function (sequelize, Sequelize) {
     }
 */
 
-  });
+  }
+  ,  { timestamps: false }
+        
+  );
 
   return User;
 };

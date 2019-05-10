@@ -1,4 +1,4 @@
-//'use strict';
+'use strict';
 
 var fs        = require('fs');
 var path      = require('path');
@@ -32,5 +32,12 @@ Object.keys(db).forEach(modelName => {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-
+/*
+(function(m) {
+        m.Project.belongsToMany(Run, {through: { model: ProjectRun, unique: false }, foreignKey: 'project_id' });
+        m.Run.belongsToMany(Project, {through:{ model: ProjectRun, unique: false }, foreignKey: 'run_id' });
+        m.Reagent.belongsToMany(Reagent, { through: RunReagent });
+        m.Run.belongsToMany(Project, { through: RunReagent });
+})(module.exports);
+*/
 module.exports = db;
