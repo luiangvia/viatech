@@ -1,4 +1,7 @@
 const db = require("../models");
+//db.models.User.findById(1).then((u)=>{u.getProjects()}).then((p)=>{project=p})   - for projects
+//db.models.User.findById(1).then((u)=>{u.getProjects()}).then((p)=>{p.getStages()}).then((s)=>{stages=s})   - for stages
+//chaining to gets projects by user
 
 //MODEL USAGE IN DOCS
 //http://docs.sequelizejs.com/manual/models-usage.html#-code-findall--code----search-for-multiple-elements-in-the-database

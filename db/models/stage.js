@@ -13,7 +13,17 @@
         
 
         },  { timestamps: false });
+
+        Stage.associate = function(models) {
+          // Associating User with Stage
+          // When an User is deleted, restrict delete of any associated Stages
+        
+          Stage.belongsToMany(models.Project, {through: { model: models.ProjectStage}, foreignKey: 'projectId' });
+          //Stage.hasMany(models.Project, {through:{model: models.ProjectStage} });  //may need a foreign key, test with debugger
+        };
       
         return Stage;
       };
+      
+ 
       
