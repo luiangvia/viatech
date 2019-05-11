@@ -1,11 +1,15 @@
 module.exports = function (sequelize, Sequelize) {
     var Reagent = sequelize.define("Reagent", {
-      reagent_id: {
+      id: {
         primaryKey: true,
         autoIncrement: true,
         type: Sequelize.INTEGER
       },
-      reagent_name: {
+      name: {
+        type: Sequelize.STRING,
+        notEmpty: true,
+      },
+      lotnumber: {
         type: Sequelize.STRING,
         notEmpty: true,
       }

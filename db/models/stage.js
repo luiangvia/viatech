@@ -1,11 +1,11 @@
     module.exports = function (sequelize, Sequelize) {
         var Stage = sequelize.define("Stage", {
-          stage_id: {
+          id: {
             primaryKey: true,
             autoIncrement: true,
             type: Sequelize.INTEGER
           },
-          stage_name: {
+          name: {
             type: Sequelize.STRING,
             notEmpty: true,
           }

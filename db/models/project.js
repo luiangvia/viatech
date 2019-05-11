@@ -5,7 +5,7 @@
             autoIncrement: true,
             type: Sequelize.INTEGER
           },
-          project_name: {
+          name: {
             type: Sequelize.STRING,
             notEmpty: true,
           }
