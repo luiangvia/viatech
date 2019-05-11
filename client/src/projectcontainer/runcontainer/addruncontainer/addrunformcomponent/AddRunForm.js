@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Checkbox from './Checkbox';
+import "./AddRunForm.css"
 
 
 
@@ -55,17 +56,63 @@ export default class AddRunForm extends Component {
     return (
       <div>
         <div>
-          <div>
-
+          <div class="formdiv"> 
+         
+              <label class="rName">
+               Analyst Name: 
+             </label>
+        <input class="rnamebox" type="text" name="name" />
+        <br/>
+        <label class="rName">
+               Assay Date: 
+             </label>
+        <input class="rnamebox" type="text" name="name" />
+        <br/>
+        <label class="rName">
+               Run Number: 
+             </label>
+        <input class="rnamebox" type="text" name="name" />
+        <br/>
+        <label class="rName">
+               First Review: 
+             </label>
+        <input class="rnamebox" type="text" name="name" />
+        <br/>
             <form onSubmit={this.handleFormSubmit}>
               {this.createCheckboxes()}
               <h4>Add Reagents:</h4>
               <p>Reagent 1</p>
-              <p>Reagent 2</p>
-              <p>Reagent 3</p>
-              <button type="submit">Submit Run</button>
+              <label class="rName">
+               Reagent Name: 
+             </label>
+        <input class="rnamebox" type="text" name="name" />
+        <label class="rName">
+               Lot Number: 
+             </label>
+        <input class="rnamebox" type="text" name="name" />
+        <p>Reagent Documentation Present?</p> <h1 class="yes">Yes</h1>
+        <p>Reagent 2</p>
+              <label class="rName">
+               Reagent Name: 
+             </label>
+        <input class="rnamebox" type="text" name="name" />
+        <label class="rName">
+               Lot Number: 
+             </label>
+        <input class="rnamebox" type="text" name="name" />
+        <p>Reagent Documentation Present?</p> <h1 class="no">No</h1>
+        <p>Reagent 3</p>
+              <label class="rName">
+               Reagent Name: 
+             </label>
+        <input class="rnamebox" type="text" name="name" />
+        <label class="rName">
+               Lot Number: 
+             </label>
+        <input class="rnamebox" type="text" name="name" />
+             
             </form>
-
+            <button type="submit">Submit Run</button>
           </div>
         </div>
       </div>

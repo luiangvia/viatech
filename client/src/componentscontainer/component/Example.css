@@ -1,0 +1,30 @@
+.logindiv{
+text-align: center
+}
+.username{
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 30px;
+    
+}
+body{
+background: yellow
+}
+.password{
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 30px;
+}
+.usernamebox{
+    height: 30px;
+    width: 200px;
+    margin:10px;
+}
+.passwordbox{
+    height: 30px;
+    width: 200px;
+    margin:10px;  
+}
+
+.logoimage{
+    height: 350px;
+    width: 400px;
+}
