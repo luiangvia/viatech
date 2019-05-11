@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
 import "./Projectsearchbar.css";
 
+
+
 export default class Projectsearchbarcomponent extends Component {
+  handleProject=(hide)=>{
+    hide.preventDefault();
+    this.props.operation(true);
+  }
+  
   render() {
     return (
-      <div>
-        <form id="projectheaderform">
+      <div >
+        
+        <form onSubmit={this.handleProject} class="projectsearchform">
             Search for Project Number:
-            <input id="projectsearchinput" type="text" name="project#"/>
+            <input class="projectsearchinput" type="text" name="project#"/>
+            <button  class="searchprojectbtn" value="Submit" type="submit">Search</button>
         </form>
-        <button class="button" id="searchforprojectbtn" type="submit">Search</button>
       </div>
     )
   }

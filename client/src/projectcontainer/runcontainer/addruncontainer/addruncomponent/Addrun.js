@@ -1,10 +1,18 @@
 import React, { Component } from 'react'
-
+import "./Addrun.css"
 export default class Addrun extends Component {
+  handleAddRunFormClick=(showAddRunForm)=>{
+    showAddRunForm.preventDefault();
+    this.props.handleAddRunForm(true);
+  }
+
+  
   render() {
+   
+
     return (
       <div>
-        <p>Add Run</p>
+        <button id="addrunbtn" class="searchprojectbtn" onClick={this.handleAddRunFormClick} > Add Run</button>
       </div>
     )
   }
