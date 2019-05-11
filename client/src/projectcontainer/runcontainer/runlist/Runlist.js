@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
-
+import "./Runlist.css"
 export default class Runlist extends Component {
+ 
   render() {
     return (
       <div>
-        <p className="runlist">Run: 1</p>
-        <p className="runlist">Run: 2</p>
-        <p className="runlist">Run: 3</p>
-        <p className="runlist">Run: 4</p>
-        <p className="runlist">Run: 5</p>
+      
+        <p class="runlist">AR: 1</p>
+        <p class="runlist">AR: 2</p>
+        <p class="runlist">AR: 3</p>
+        <p class="runlist">AR: 4</p>
+        <p class="runlist">AR: 5</p>
       </div>
     )
   }

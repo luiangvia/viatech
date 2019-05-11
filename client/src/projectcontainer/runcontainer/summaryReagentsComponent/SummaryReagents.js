@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-
+import "./SummaryReagents.css"
 export default class SummaryReagents extends Component {
   render() {
     return (
-      <div>
-        <h1>Summary of Reagents Per Run</h1>
+      <div class="rgnsummary">
+    
         <h2>Run 1</h2>
         <ul>
         <li>Reagent 1</li>
@@ -26,6 +26,7 @@ export default class SummaryReagents extends Component {
         <li>Reagent 3</li>
         <li>Reagent 4</li>
         </ul>
+        <button type="submit">Print Reagent List</button>
       </div>
     )
   }
