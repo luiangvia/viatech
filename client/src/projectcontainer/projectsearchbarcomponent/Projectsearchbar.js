@@ -16,7 +16,7 @@ export default class Projectsearchbarcomponent extends Component {
         <form onSubmit={this.handleProject} class="projectsearchform">
             Search for Project Number:
             <input class="projectsearchinput" type="text" name="project#"/>
-            <button  class="searchprojectbtn" value="Submit" type="submit">Search</button>
+            <button  class="viatechButtons" value="Submit" type="submit">Search</button>
         </form>
       </div>
     )

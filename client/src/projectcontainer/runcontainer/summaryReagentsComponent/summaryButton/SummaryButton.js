@@ -8,7 +8,7 @@ export default class SummaryButton extends Component {
   render() {
     return (
       <div>
-        <button id="summarybtn" class="searchprojectbtn"  onClick={this.handleSummaryReagentsClick}>Summary of Reagents Per Run</button>
+        <button id="summarybtn" class="viatechButtons"  onClick={this.handleSummaryReagentsClick}>Summary of Reagents Per Run</button>
       </div>
     )
   }

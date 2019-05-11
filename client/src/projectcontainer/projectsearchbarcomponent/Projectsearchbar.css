@@ -1,11 +1,11 @@
 
-.searchprojectbtn:before{
+.viatechButtons:before{
     content:'';
     height:100%;
     display:inline-block;
     vertical-align:middle;
   }
- .searchprojectbtn{
+ .viatechButtons{
     background:rgb(96, 174, 248);
     color:#fff;
     border:none;
@@ -16,13 +16,13 @@
     cursor:pointer;
     transition:800ms ease all;
     outline:none;
-    border-radius: 20px;
+    border-radius: 10px;
   }
-  .searchprojectbtn:hover{
+  .viatechButtons:hover{
     background:#fff;
     color:#1AAB8A;
   }
-  .searchprojectbtn:before,.searchprojectbtn:after{
+  .viatechButtons:before,.viatechButtons:after{
     content:'';
     position:absolute;
     top:0;
@@ -32,13 +32,13 @@
     background: #1AAB8A;
     transition:400ms ease all;
   }
-  .searchprojectbtn:after{
+  .viatechButtons:after{
     right:inherit;
     top:inherit;
     left:0;
     bottom:0;
   }
-  .searchprojectbtn:hover:before,.searchprojectbtn:hover:after{
+  .viatechButtons:hover:before,.viatechButtons:hover:after{
     width:100%;
     transition:800ms ease all;
   }

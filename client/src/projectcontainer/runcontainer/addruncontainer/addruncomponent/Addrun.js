@@ -12,7 +12,7 @@ export default class Addrun extends Component {
 
     return (
       <div>
-        <button id="addrunbtn" class="searchprojectbtn" onClick={this.handleAddRunFormClick} > Add Run</button>
+        <button id="addrunbtn" class="viatechButtons" onClick={this.handleAddRunFormClick} > Add Run</button>
       </div>
     )
   }

@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
-import '../App.css';
-import Header from '../headercontainer/headercomponent/Header';
-import Footer from '../footercontainer/footercomponent/Footer';
-import Projectsearchbarcomponent from '../projectcontainer/projectsearchbarcomponent/Projectsearchbar';
-import Projectlist from '../projectcontainer/projectlistcomponent/Projectlist';
-import Runlist from '../projectcontainer/runcontainer/runlist/Runlist';
-import Addrun from '../projectcontainer/runcontainer/addruncontainer/addruncomponent/Addrun';
-import SummaryReagents from '../projectcontainer/runcontainer/summaryReagentsComponent/SummaryReagents';
-import AddRunForm from '../projectcontainer/runcontainer/addruncontainer/addrunformcomponent/AddRunForm';
-import Projectcategory from '../projectcontainer/projectcategorycomponent/Projectcategory';
-import SummaryButton from '../projectcontainer/runcontainer/summaryReagentsComponent/summaryButton/SummaryButton';
+import Header from '../../headercontainer/headercomponent/Header';
+import Footer from '../../footercontainer/footercomponent/Footer';
+import Projectsearchbarcomponent from '../../projectcontainer/projectsearchbarcomponent/Projectsearchbar';
+import Projectlist from '../../projectcontainer/projectlistcomponent/Projectlist';
+import Runlist from '../../projectcontainer/runcontainer/runlist/Runlist';
+import Addrun from '../../projectcontainer/runcontainer/addruncontainer/addruncomponent/Addrun';
+import SummaryReagents from '../../projectcontainer/runcontainer/summaryReagentsComponent/SummaryReagents';
+import AddRunForm from '../../projectcontainer/runcontainer/addruncontainer/addrunformcomponent/AddRunForm';
+import Projectcategory from '../../projectcontainer/projectcategorycomponent/Projectcategory';
+import SummaryButton from '../../projectcontainer/runcontainer/summaryReagentsComponent/summaryButton/SummaryButton';
 
 
 
-class Main extends Component {
+class MainPageFE extends Component {
 
     state = {
         showMe: false,
@@ -25,6 +24,7 @@ class Main extends Component {
 
     operation = (project) => {
         this.setState({ showMe: project });
+           // ! everytime you click it will change the state
         //replace project with the following code in order to show and hide after every click
         // !this.state.showMe
     }
@@ -62,4 +62,4 @@ class Main extends Component {
         )
     }
 }
-export default Main;
+export default MainPageFE;
