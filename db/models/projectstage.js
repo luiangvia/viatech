@@ -1,11 +1,30 @@
 module.exports = function (sequelize, Sequelize) {
     var ProjectStage = sequelize.define("ProjectStage", {
+        /*
         id: {
             type: Sequelize.INTEGER,
             primaryKey: true,
             autoIncrement: true
         }
-    });
+        */
+        
+        projectId: {
+            type: Sequelize.INTEGER,
+            allowNull: false,
+            references:{
+                model:'Project',
+                key:'id'
+            }
+        },
+            stageId: {
+                type: Sequelize.INTEGER,
+                allowNull: false,
+                references:{
+                    model:'Stage',
+                    key:'id'
+                }
+        }
+    }, { timestamps: false });
 
     ProjectStage.associate = function(models) {
         // Associating User with Project
@@ -22,3 +41,9 @@ module.exports = function (sequelize, Sequelize) {
         //Run.belongsToMany(Project, {through:{ model: ProjectStage, unique: false }, foreignKey: 'id' });
         return ProjectStage;
 } 
+
+/*
+Associate block is important for us. Try setting up the ProjectStages model as the link has
+https://medium.com/@the_ozmic/how-to-create-many-to-many-relationship-using-sequelize-orm-postgres-on-express-677753a3edb5
+I believe the 'as' parameter is what we're missing
+*/

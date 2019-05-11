@@ -93,7 +93,7 @@ app.listen(PORT, function () {
 });
 
 //below is just a placeholder for seeding the db....should use migrations
-setTimeout(seedDB, 5000);
+setTimeout(seedDB, 10000);
 
 function seedDB(){
 require('mysql-import').config({

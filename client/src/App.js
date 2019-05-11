@@ -13,8 +13,8 @@ import SummaryReagents from './projectcontainer/runcontainer/summaryReagentsComp
 import AddRunForm from './projectcontainer/runcontainer/addruncontainer/addrunformcomponent/AddRunForm';
 import Projectcategory from './projectcontainer/projectcategorycomponent/Projectcategory';
 
-import ListProjects from './AddLoadListProjects/ListProjects';
-import AddProjectForm from './AddLoadListProjects/AddProjectForm';
+import ListProjects from './dbProjectDisplayExample/ListProjects';
+import AddProjectForm from './dbProjectDisplayExample/AddProjectForm';
 //TODO: RENAME THE FOLDERS/FILES
 
 
