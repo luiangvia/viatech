@@ -5,7 +5,7 @@ const app = express();
 const bodyParser = require("body-parser");
 var models = require("./db/models");
 const routes = require("./routes");
-
+const mysql_import = require('mysql-import');
 
 // Configure body parser for AJAX requests
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -90,6 +90,21 @@ app.get("*", function (req, res) {
 app.listen(PORT, function () {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
+
+//below is just a placeholder for seeding the db....should use migrations
+setTimeout(seedDB, 5000);
+
+function seedDB(){
+require('mysql-import').config({
+	host: '127.0.0.1',
+	user: 'root',
+	password: 'figwin',
+	database: 'viatech',
+	onerror: err=>console.log(err.message)
+}).import('seed.sql').then(()=> {
+	console.log('all sql statements have been executed')
+});
+}
 
 
 //USE SEQUELIZE INCLUDE OR SEQUELIZE FILTER TO GRAB DB INFO 
