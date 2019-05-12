@@ -10,9 +10,11 @@ import AddRunForm from '../../projectcontainer/runcontainer/addruncontainer/addr
 import Projectcategory from '../../projectcontainer/projectcategorycomponent/Projectcategory';
 import SummaryButton from '../../projectcontainer/runcontainer/summaryReagentsComponent/summaryButton/SummaryButton';
 
+
 //example imports below
 import ListProjects from '../../dbProjectDisplayExample/ListProjects';
 import AddProjectForm from '../../dbProjectDisplayExample/AddProjectForm';
+
 
 
 class MainPageFE extends Component {
@@ -52,8 +54,10 @@ class MainPageFE extends Component {
         return (
             <div className='App'>
                 <Header />
+
                 <ListProjects/>
                 <AddProjectForm/>
+
                 <Projectsearchbarcomponent operation={this.operation} />
                 {this.state.showMe ? <Projectlist handleCategory={this.handleCategory} /> : null}
                 {this.state.showMeCategory ? <Projectcategory handleRun={this.handleRun} /> : null}
