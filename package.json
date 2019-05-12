@@ -2,9 +2,9 @@
   "name": "react-server-boilerplate",
   "version": "1.0.0",
   "main": "server.js",
-  "repository": "git@github.com:traut029/react-server-boilerplate.git",
-  "author": "Eric Trautmiller",
-  "license": "MIT",
+  "repository": "",
+  "author": "",
+  "license": "",
   "scripts": {
     "server": "node server.js",
     "client": "node scripts/start-client.js",
@@ -19,6 +19,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.15.4",
+    "mysql-import": "^2.0.2",
     "mysql2": "^1.5.3",
     "react-router-dom": "^5.0.0",
     "sequelize": "^4.37.8"
