@@ -26,6 +26,7 @@
     "mysql-import": "^2.0.2",
     "mysql2": "^1.5.3",
     "react-router-dom": "^5.0.0",
-    "sequelize": "^4.37.8"
+    "sequelize": "^4.37.8",
+    "server": "^1.0.18"
   }
 }

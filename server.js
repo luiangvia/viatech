@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-
+var db = require("./db/models");
 const app = express();
 const bodyParser = require("body-parser");
 // var models = require("./db/models");
@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
-var db = require("./db/models");
+
 
 var PORT = process.env.PORT || 3001;
 db.sequelize.sync().then(function() {
