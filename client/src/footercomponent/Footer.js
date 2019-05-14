@@ -5,7 +5,7 @@ export default class Footer extends Component {
   render() {
     return (
       <div class="footer">
-        <p>Created by Luis Via</p>
+        <p class="footerp">Created by Isa, Chris, and Luis</p>
       </div>
     )
   }

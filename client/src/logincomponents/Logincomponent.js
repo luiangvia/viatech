@@ -4,12 +4,7 @@ import logo from '../images/viatechlogo.png'
 
 //we are creating the "Logincomponent" component in order be render/re-use in other places.
 class Logincomponent extends React.Component {
-
-  loginHandle = () => {
-    this.setState(prevState => ({
-      loggedIn: prevState.loggedIn
-    }));
-  }
+  
   //handleSubmit allows you to access the Main page once you have Log in
   handleSubmit = (event) => {
     event.preventDefault();
