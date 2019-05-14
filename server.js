@@ -4,10 +4,10 @@ var db = require("./db/models");
 const app = express();
 const bodyParser = require("body-parser");
 // var models = require("./db/models");
-const routes = require("./routes");
+
 //dependancy to be added to README below
 // const mysql_import = require('mysql-import');
-
+const routes = require("./routes");
 // Configure body parser for AJAX requests
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
