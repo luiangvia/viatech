@@ -99,7 +99,7 @@ function seedDB(){
 require('mysql-import').config({
 	host: '127.0.0.1',
 	user: 'root',
-	password: 'figwin',
+	password: '92Lu13iaV$',
 	database: 'viatech',
 	onerror: err=>console.log(err.message)
 }).import('seed.sql').then(()=> {
