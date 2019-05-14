@@ -3,7 +3,7 @@ const path = require("path");
 
 const app = express();
 const bodyParser = require("body-parser");
-var models = require("./db/models");
+// var models = require("./db/models");
 const routes = require("./routes");
 //dependancy to be added to README below
 // const mysql_import = require('mysql-import');
@@ -103,9 +103,9 @@ app.get("*", function (req, res) {
 });
 
 
-app.listen(PORT, function () {
-  console.log(`🌎 ==> Server now on port ${PORT}!`);
-});
+// app.listen(PORT, function () {
+//   console.log(`🌎 ==> Server now on port ${PORT}!`);
+// });
 
 //below is just a placeholder for seeding the db....should use migrations
 // setTimeout(seedDB, 10000);
