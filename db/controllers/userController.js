@@ -58,9 +58,9 @@ stages
   */
 
 
+// to add all stages to projects 
 //let projects
-  //dbex.Project.findAll().then(p=>projects=p)  
-  //dbex.Project.findById(1).then(p=>project=p)
+//dbex.Project.addStages(stages).then(map of projects or for each to loop through projects)
 
   /*
 
