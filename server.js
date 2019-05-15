@@ -93,13 +93,14 @@ app.listen(PORT, function () {
 });
 
 //below is just a placeholder for seeding the db....should use migrations
+
 setTimeout(seedDB, 10000);
 
 function seedDB(){
 require('mysql-import').config({
 	host: '127.0.0.1',
 	user: 'root',
-	password: '92Lu13iaV$',
+	password: 'figwin',
 	database: 'viatech',
 	onerror: err=>console.log(err.message)
 }).import('seed.sql').then(()=> {

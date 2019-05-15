@@ -10,3 +10,13 @@ module.exports = {
           })
       }
 }
+
+//need function to get runs from stage id that belong to project id
+    //used after clicking stage inside of project
+
+//need function to get run id and all run data from stage id from projectid 
+    //- used to list runs from stages, also used in summary of regaents
+
+//need function to post run id with all run data, (and reagent ids?), into stage id inside of projectid
+    //used after clicking on add run and submitting
+
