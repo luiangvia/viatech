@@ -14,7 +14,7 @@ router.use("/reagent", reagentRoutes);
 // run routes
 router.use("/run", runRoutes);
 // stage routes
-router.use("/project", stageRoutes);
+router.use("/stage", stageRoutes);
 // user routes
 router.use("/user", userRoutes);
 // image routes

@@ -5,5 +5,8 @@ const stageController = require("../../db/controllers/stageController");
 router.route("/")
     .get(stageController.findAll);
 
+    router.route("/:id")
+    .get(stageController.findOne);
+
 
 module.exports = router;

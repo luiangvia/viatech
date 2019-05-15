@@ -5,6 +5,9 @@ const projectController = require("../../db/controllers/projectController");
 router.route("/")
     .get(projectController.findAll);
 
+  
+
+
 /* example code below
 const router = require("express").Router();
 const booksController = require("../../controllers/booksController");

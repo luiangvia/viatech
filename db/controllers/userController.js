@@ -33,3 +33,37 @@ reusable find by id
 findAll: function(req, res) {
         db.User.findOne({where:{user_id:1}}).then(user=>{res.json(user)})
 */
+
+
+//another debugging example to test associations
+/*
+const dbex = require("../models");
+let project
+dbex.Project.findById(1).then(p=>project=p)
+project
+(returns model)
+
+let stages
+project.getStages().then(s=>{stages=s})
+stages
+*/
+
+/*adding stages
+ project.getStages().then(s=>{stages=s})  
+  stages
+  project.addStages(stages)
+  project.getStages().then(s=>{stages=s})
+  stages
+  goto bottom (ProjectStage)
+  */
+
+
+//let projects
+  //dbex.Project.findAll().then(p=>projects=p)  
+  //dbex.Project.findById(1).then(p=>project=p)
+
+  /*
+
+  
+
+  */
