@@ -3,6 +3,7 @@ const path = require("path");
 var db = require("./db/models");
 const app = express();
 const bodyParser = require("body-parser");
+var PORT = process.env.PORT || 3001;
 // var models = require("./db/models");
 
 //dependancy to be added to README below
@@ -27,7 +28,6 @@ app.use(bodyParser.json());
 // clearing the `testdb`
 
 
-var PORT = process.env.PORT || 3001;
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT" + PORT);
