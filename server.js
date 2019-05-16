@@ -3,7 +3,7 @@ const path = require("path");
 var db = require("./db/models");
 const app = express();
 const bodyParser = require("body-parser");
-// var models = require("./db/models");
+var PORT = process.env.PORT || 3001;
 
 //dependancy to be added to README below
 // const mysql_import = require('mysql-import');
@@ -12,6 +12,8 @@ const routes = require("./routes");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 //Sync Database
 //var sequelize = new Sequelize("./db/config")
 //var sequelize = require("./db/connection.js")
@@ -25,11 +27,6 @@ app.use(bodyParser.json());
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
-
-
-var PORT = process.env.PORT || 3001;
-
-
 
 
 ////
@@ -94,13 +91,12 @@ Project.findAll().then(projects => {
 // Send every request to the React app
 // Define any API routes before this runs
 
-app.get("*", function (req, res) {
+app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
-
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT" + PORT);
+db.sequelize.sync().then(function () {
+  app.listen(PORT, () => {
+    console.log(`App listening on PORT" + ${PORT}!`);
   });
 });
 // app.listen(PORT, function () {
