@@ -1,11 +1,19 @@
 //this is handling the route of /api/project
 const router = require("express").Router();
 const projectController = require("../../db/controllers/projectController");
+const stage = require("./stage");
 
 router.route("/")
-    .get(projectController.findAll);
+  .get(projectController.findAll);
 
-/* example code below
+router.route("/:id")
+  .get(projectController.findOne);
+
+  router.use("/:id/stage",projectController.appendProjectId,stage); //',stage" sets value of next() for findStags fucntion
+
+
+router.route("/create").post(projectController.createProject);
+  /* example code below
 const router = require("express").Router();
 const booksController = require("../../controllers/booksController");
 
