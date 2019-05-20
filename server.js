@@ -1,19 +1,17 @@
 const express = require("express");
 const path = require("path");
-var db = require("./db/models");
+const PORT = process.env.PORT || 3001;
 const app = express();
 const bodyParser = require("body-parser");
-var PORT = process.env.PORT || 3001;
-
-//dependancy to be added to README below
-// const mysql_import = require('mysql-import');
+var models = require("./db/models");
 const routes = require("./routes");
+//dependancy to be added to README below
+const mysql_import = require('mysql-import');
+
 // Configure body parser for AJAX requests
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
 //Sync Database
 //var sequelize = new Sequelize("./db/config")
 //var sequelize = require("./db/connection.js")
@@ -24,18 +22,12 @@ app.use(express.json());
 //require("./routes/index.js")(app);
 //require("./routes/users.js")(app);
 
+models.sequelize.sync({ force: true }).then(function () {
+  console.log('Nice! Database looks fine')
 
-// If running a test, set syncOptions.force to true
-// clearing the `testdb`
-
-
-////
-// models.sequelize.sync({ force: false }).then(function () {
-//   console.log('Nice! Database looks fine')
-
-// }).catch(function (err) {
-//   console.log(err, "Something went wrong with the Database Update!")
-// });
+}).catch(function (err) {
+  console.log(err, "Something went wrong with the Database Update!")
+});
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -91,32 +83,31 @@ Project.findAll().then(projects => {
 // Send every request to the React app
 // Define any API routes before this runs
 
-app.get("*", (req, res) => {
+app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
-db.sequelize.sync().then(function () {
-  app.listen(PORT, () => {
-    console.log(`App listening on PORT" + ${PORT}!`);
-  });
+
+
+app.listen(PORT, function () {
+  console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
-// app.listen(PORT, function () {
-//   console.log(`🌎 ==> Server now on port ${PORT}!`);
-// });
 
 //below is just a placeholder for seeding the db....should use migrations
-// setTimeout(seedDB, 10000);
 
-// function seedDB(){
-// require('mysql-import').config({
-// 	host: '127.0.0.1',
-// 	user: 'root',
-// 	password: '92Lu13iaV$',
-// 	database: 'viatech',
-// 	onerror: err=>console.log(err.message)
-// }).import('seed.sql').then(()=> {
-// 	console.log('all sql statements have been executed')
-// });
-// }
+setTimeout(seedDB, 10000);
+
+function seedDB(){
+require('mysql-import').config({
+	host: '127.0.0.1',
+	user: 'root',
+	password: 'figwin',
+	database: 'viatech',
+	onerror: err=>console.log(err.message)
+}).import('seed.sql').then(()=> {
+	console.log('all sql statements have been executed')
+});
+
+}
 
 
 //USE SEQUELIZE INCLUDE OR SEQUELIZE FILTER TO GRAB DB INFO 
